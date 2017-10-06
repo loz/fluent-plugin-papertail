@@ -1,4 +1,5 @@
 require 'syslog_protocol'
+require 'fluent/output'
 
 module Fluent
   class Papertrail < Fluent::Output
