@@ -22,7 +22,22 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To configure this in fluentd
+
+<match whatever.*>
+  type papertrail
+  papertrail_host <your papertrail hostname>
+  papertrail_port <your papertrail port>
+</match>
+
+Use a record transform plugin to populate within the record the following fields:
+
+    message   The log
+    program   The program/tag
+    severity  A valid syslog severity label
+    facility  A valid syslog facility label
+    hostname  The source hostname for papertrail logging
+
 
 ## Development
 
@@ -38,4 +53,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
