@@ -24,11 +24,11 @@ Or install it yourself as:
 
 To configure this in fluentd
 
-<match whatever.*>
-  type papertrail
-  papertrail_host <your papertrail hostname>
-  papertrail_port <your papertrail port>
-</match>
+   <match whatever.*>
+     type papertrail
+     papertrail_host <your papertrail hostname>
+      papertrail_port <your papertrail port>
+   </match>
 
 Use a record transform plugin to populate within the record the following fields:
 
